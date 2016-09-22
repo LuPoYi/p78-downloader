@@ -36,22 +36,21 @@ func goCrawler(url string) {
 
 	doc.Find("ul#portfolio li").Each(func(i int, s *goquery.Selection) {
 		title, _ := s.Find(".picture_overlay img").Eq(0).Attr("alt")
-    img_url, _ := s.Find(".picture_overlay img").Eq(0).Attr("src")
+		imgURL, _ := s.Find(".picture_overlay img").Eq(0).Attr("src")
 
-    if img_url[0:4] != "http" {
-      img_url = "https://porn77.info/" + img_url
-    }
+		if imgURL[0:4] != "http" {
+			imgURL = "https://porn77.info/" + imgURL
+		}
 
-    goDownload(img_url, title)
+		goDownload(imgURL, title)
 	})
 }
 
 func main() {
-	for i := 1 ; i < 3 ; i++ {
+	for i := 1; i < 3; i++ {
 		fmt.Println("goCrawler FHD Page " + strconv.Itoa(i))
 		goCrawler("https://porn77.info/video/index/search/FHD/page/" + strconv.Itoa(i))
 	}
 }
-
 
 // http://studygolang.com/articles/8359

@@ -1,6 +1,14 @@
 # Porn77.info Crawler
 
 
+# 如何使用
+
+```go
+ $ go run main.go
+goCrawler FHD Page 1
+Downloading http://pics.dmm.co.jp/mono/movie/adult/cjod045/cjod045pl.jpg ...
+```
+
 
 # TODOs
 

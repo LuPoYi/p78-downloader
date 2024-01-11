@@ -1,3 +1,5 @@
 /images/
 !/images/.keep
 download_list.txt
+
+.env
